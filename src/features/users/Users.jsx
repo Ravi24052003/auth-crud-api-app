@@ -38,7 +38,7 @@ const Users = () => {
         <div key={user._id} className=' font-semibold ml-5 mb-5 md:w-[280px] md:my-7'>
           <div>
           <h1><span className=' font-bold'>{i+1})  First Name:</span>  {user?.firstName}</h1>
-         <h2>{user?.lastName && <span> <span className=' font-bold'>Last Name:</span> {user.lastName}</span> }</h2>
+         <h2>{user?.lastName && <span> <span className=' font-bold'>Last Name:</span> {user?.lastName}</span> }</h2>
          <h2><span className=' font-bold'>Email:</span>  {user?.email}</h2>
           </div>
         

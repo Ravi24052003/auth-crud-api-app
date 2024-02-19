@@ -104,7 +104,7 @@ userEditable?
  <div className=' flex flex-col items-center font-semibold mt-2 mb-6'>
   <h2>{currentUser?.email}</h2>
   <h1>First name: {currentUser?.firstName}</h1>
-   <h1>{(currentUser.lastName) && <span>Last name: {currentUser.lastName}</span> }</h1>
+   <h1>{(currentUser?.lastName) && <span>Last name: {currentUser?.lastName}</span> }</h1>
    <button className=' bg-yellow-500 px-4 py-1 text-white rounded mt-3' onClick={()=>{
     dispatch(setUserEditable())
    }}>Edit</button>
