@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
-import {createProduct as createProductAsync, setIsProductCreated} from "../../features/profile/profileSlice";
+import {createProduct as createProductAsync, getCurrentUser, setIsProductCreated} from "../../features/profile/profileSlice";
 import MainHeader from '../header/MainHeader';
 
 const CreateProduct = () => {
@@ -13,6 +13,11 @@ const CreateProduct = () => {
   const isProductCreated = useSelector(state=> state.profile.isProductCreated);
   const status = useSelector(state=> state.profile.status);
   const isJWTexpired = useSelector(state=> state.login.isJWTexpired);
+
+  
+  useEffect(()=>{
+    dispatch(getCurrentUser())
+    }, [])
 
     useEffect(()=>{
    if(isJWTexpired){
