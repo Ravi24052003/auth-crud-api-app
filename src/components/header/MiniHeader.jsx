@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
 const MiniHeader = () => {
-    const productsInCart = useSelector(state=> state.products.productsInCart);
+    const productsInCart = useSelector(state=> state.cart.cartProducts);
 
   return (
     <div>
